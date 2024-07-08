@@ -3,11 +3,9 @@ package this_keyword;
 public class This_keyword {
 
     public static void main(String[] args) {
+        //এখানে ২টি class use করা হয়েছে, এই main class থেকে অন্য class-কে call করা হয়েছে।।
 
-        Teacher teacher1 = new Teacher("Kamrul Islam", "Science", 31);
-        teacher1.display();
-
-        Teacher teacher2 = new Teacher("Altaf Hussain", "Computer", "java expert", 34, 17236291);
-        teacher2.display();
+        Teacher teacher = new Teacher();
+        teacher.display2();
     }
 }

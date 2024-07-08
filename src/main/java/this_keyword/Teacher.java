@@ -1,28 +1,18 @@
 package this_keyword;
 
 public class Teacher {
+    //এখানে ২টি class use করা হয়েছে, main class থেকে এই class-কে call করা হয়েছে।।
 
-    String name, subjectName, qualification;
-    int age, phone;
-
-    Teacher(String name, String subjectName, int age) {
-        this.name = name;
-        this.subjectName = subjectName;
-        this.age = age;
+    void display1() {
+        System.out.println("Usages of \"this\" keyword.");
+        System.out.println(" refer current class instance variable.");
+        System.out.println(" used to call current class constructor.");
     }
 
-    Teacher(String name, String subjectName, String qualification, int age, int phone) {
-        this(name, subjectName, age);     //উপরের constructor-কে call করা হয়েছে,
-        this.qualification = qualification;
-        this.phone = phone;
-    }
-
-    void display() {
-        System.out.println("Name          : " + name);
-        System.out.println("SubjectName   : " + subjectName);
-        System.out.println("Qualification : " + qualification);
-        System.out.println("Age           : " + age);
-        System.out.println("Phone         : " + phone);
+    void display2() {
+        this.display1();  //উপরের method-কে call করা হয়েছে, এই line-কে সবার উপরে রাখতে হয়।।
+        System.out.println(" used to call current class method.");
+        System.out.println(" passed as an argument in the method.(event handling)");
         System.out.printf("\n");
     }
 
@@ -34,5 +24,6 @@ public class Teacher {
     refer current class instance variable.
     it can be used to call current class constructor.
     it can be used to call current class method.
+    it can be passed as an argument in the method. (event handling)
      */
 }
