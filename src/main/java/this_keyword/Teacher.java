@@ -11,24 +11,23 @@ public class Teacher {
         this.age = age;
     }
 
+    Teacher(String name, String subjectName, String qualification, int age, int phone) {
+        this(name, subjectName, age);     //উপরের constructor-কে call করা হয়েছে,
+        this.qualification = qualification;
+        this.phone = phone;
+    }
+
     void display() {
-        System.out.println("Name        : " + name);
-        System.out.println("SubjectName : " + subjectName);
-        System.out.println("Age         : " + age);
+        System.out.println("Name          : " + name);
+        System.out.println("SubjectName   : " + subjectName);
+        System.out.println("Qualification : " + qualification);
+        System.out.println("Age           : " + age);
+        System.out.println("Phone         : " + phone);
+        System.out.printf("\n");
     }
 
     /*
-    Instance variable hiding :
-    Instance variable & local variable same ধরা হয়েছে, 
-    যেমন- name = name;
-         subjectName = subjectName;
-         age = age;
-    
-    একত্রে পেলে, java instance variable এর তুলনায় local variable-কে বেশি গুরুত্ব দেয়, এবং এখানে
-    উভয় পক্ষকে local variable হিসেবে ধরে নেয়, আর এটাকে instance variable hiding বলে।।
-    variable hiding এর কারণে উপরে error দেখাচ্ছে, 
-    
-    এ error এর সমাধান হচ্ছে, "this" keyword
+    "this" keyword মূলত object oriented programming_OOP এর অংশ।। 
     "this" keyword এর সাহায্যে current class-এর object-কে refer করা হয়।।
     
     Usages of "this" keyword :
